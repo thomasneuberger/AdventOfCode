@@ -1,8 +1,11 @@
-﻿namespace MonkeyInTheMiddle;
+﻿using System.Numerics;
 
-public class Monkey
+namespace MonkeyInTheMiddle;
+
+public class Monkey<T>
+    where T : INumber<T>
 {
-    public Monkey(int id, Func<long, long> operation, int testDivider, int targetMonkeyTrue, int targetMonkeyFalse)
+    public Monkey(int id, Func<T, T> operation, T testDivider, int targetMonkeyTrue, int targetMonkeyFalse)
     {
         Operation = operation;
         TestDivider = testDivider;
@@ -13,29 +16,28 @@ public class Monkey
 
     public int Id { get; }
 
-    public Queue<Item> Items { get; } = new();
+    public Queue<Item<T>> Items { get; } = new();
 
-    public Func<long, long> Operation { get; }
+    public Func<T, T> Operation { get; }
 
-    public int TestDivider { get; }
+    public T TestDivider { get; }
 
     public int TargetMonkeyTrue { get; }
     public int TargetMonkeyFalse { get; }
 
-    public int Inspections { get; set; } = 0;
+    public long Inspections { get; private set; } = 0;
 
-    public void Inspect(Item item, Monkey[] monkeys)
+    public void Inspect(Item<T> item, Monkey<T>[] monkeys)
     {
-        Console.WriteLine($"Inspect item in monkey {Id}");
-        item.WorryLevel = Operation(item.WorryLevel) / 3;
-        if (item.WorryLevel % TestDivider == 0)
+        item.WorryLevel = Operation(item.WorryLevel);
+        if (item.WorryLevel % TestDivider == T.Zero)
         {
-            Console.WriteLine($"Throw item {item.Id} with worry level {item.WorryLevel} to monkey {TargetMonkeyTrue}");
+            // Console.WriteLine($"Monkey {Id} throws item {item.Id} with worry level {item.WorryLevel} to monkey {TargetMonkeyTrue}");
             monkeys[TargetMonkeyTrue].Items.Enqueue(item);
         }
         else
         {
-            Console.WriteLine($"Throw item {item.Id} with worry level {item.WorryLevel} to monkey {TargetMonkeyFalse}");
+            // Console.WriteLine($"Monkey {Id} throws item {item.Id} with worry level {item.WorryLevel} to monkey {TargetMonkeyFalse}");
             monkeys[TargetMonkeyFalse].Items.Enqueue(item);
         }
 

@@ -1,12 +1,16 @@
-﻿namespace MonkeyInTheMiddle;
+﻿using System.Numerics;
 
-public class Item
+namespace MonkeyInTheMiddle;
+
+public class Item<T>
+    where T : INumber<T>
 {
-    public Item(int id)
+    public Item(int id, T initialWorryLevel)
     {
         Id = id;
+        WorryLevel = initialWorryLevel;
     }
 
     public int Id { get; }
-    public long WorryLevel { get; set; }
+    public T WorryLevel { get; set; }
 }
