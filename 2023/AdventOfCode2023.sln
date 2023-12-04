@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_Trebouchet", "01_Trebouchet\01_Trebouchet.csproj", "{C5938114-C771-4EAC-B2F7-1EF66F588100}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_CubeConundrum", "02_CubeConundrum\02_CubeConundrum.csproj", "{22C2B988-55ED-4D18-A58A-872CC5510026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{C5938114-C771-4EAC-B2F7-1EF66F588100}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5938114-C771-4EAC-B2F7-1EF66F588100}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5938114-C771-4EAC-B2F7-1EF66F588100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22C2B988-55ED-4D18-A58A-872CC5510026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22C2B988-55ED-4D18-A58A-872CC5510026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22C2B988-55ED-4D18-A58A-872CC5510026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22C2B988-55ED-4D18-A58A-872CC5510026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
