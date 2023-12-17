@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_IfYouGiveASeedAFertilize
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_WaitForIt", "06_WaitForIt\06_WaitForIt.csproj", "{1B068813-F763-4B8B-B537-66835917D8BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_CamelCards", "07_CamelCards\07_CamelCards.csproj", "{9AFC4EFA-F334-48B3-A6AE-91E9578C5F14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{1B068813-F763-4B8B-B537-66835917D8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B068813-F763-4B8B-B537-66835917D8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B068813-F763-4B8B-B537-66835917D8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AFC4EFA-F334-48B3-A6AE-91E9578C5F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AFC4EFA-F334-48B3-A6AE-91E9578C5F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AFC4EFA-F334-48B3-A6AE-91E9578C5F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AFC4EFA-F334-48B3-A6AE-91E9578C5F14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
